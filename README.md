@@ -1,7 +1,6 @@
 ## Cargoroo API test
 
-***** Falar sobre  duvida na criação de origin e destination *****
-***** Adicionar endereço e criar long-lat do endereço *****
+***** Adicionar data para o terminal dia/semana/mes *****
 
 ### Run the project with docker: 
 

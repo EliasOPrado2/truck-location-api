@@ -29,7 +29,8 @@ class DestinationCoordiateSerializer(CoordinatesSerializerMixin):
             'postcode', 
             'country', 
             'longitude', 
-            'latitude'
+            'latitude',
+            'origin',
         ]
         
         extra_kwargs = {
