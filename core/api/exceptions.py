@@ -10,10 +10,10 @@ class InvalidAddress(APIException):
     default_code = "invalid"
 
 
-class NoDisplayedId(APIException):
+class NoSimilarAddress(APIException):
     status_code = status.HTTP_400_BAD_REQUEST
     default_detail = (
-        "No 'PK' applied to ."
+        "Origin and destination should not be similar."
     )
     default_code = "invalid"
 
