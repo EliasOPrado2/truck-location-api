@@ -1,7 +1,6 @@
 from geopy.geocoders import Nominatim
 from decouple import config
 from core.api import exceptions
-from core.api.services.serializer_mixin import CoordinatesSerializerMixin
 from rest_framework import serializers
 from core.models import Address
 
