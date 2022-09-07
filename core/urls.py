@@ -4,7 +4,8 @@ from rest_framework_nested import routers
 from core.api.viewsets import (
     TruckDriverViewSet,
     RouteViewSet,
-    AddressViewSet
+    AddressViewSet,
+    TerminalViewSet
 ) 
 
 app_name = 'core'
@@ -26,4 +27,5 @@ route_routers.register(
 urlpatterns = [
     path("", include(router.urls)),
     path("", include(route_routers.urls)),
+    path("terminal/", TerminalViewSet.as_view())
 ]

@@ -8,5 +8,10 @@ class RouteViewSet(viewsets.ModelViewSet):
     serializer_class = RouteSerializer
 
     def get_queryset(self):
-        truck_driver_id = self.kwargs["truckdrivers_pk"]
-        return Route.objects.filter(truck_driver=truck_driver_id)
+        
+        try:
+            truck_driver_id = self.kwargs["truckdrivers_pk"]
+            return Route.objects.filter(truck_driver=truck_driver_id)
+
+        except KeyError:
+            return self.queryset

@@ -1,6 +1,4 @@
 from geopy.distance import geodesic
-from django.db.models.functions import TruncMonth
-from django.db.models import Count
 from rest_framework import serializers
 from core.api import exceptions
 from core.models import Route, TruckDriver, Address
@@ -78,9 +76,6 @@ class RouteSerializer(serializers.ModelSerializer):
         return super().update(instance, validated_data)
 
     def to_representation(self, instance):
-
-        item = Route.objects.annotate(month=TruncMonth('created_at')).values('month').annotate(c=Count('id')).values('month', 'c') 
-        print(item)
         origin = instance.origin
         destination = instance.destination
         data = {
