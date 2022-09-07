@@ -7,7 +7,6 @@ class Address(models.Model):
 
     :param models (module): hold fields and params to be used into models.
     """
-
     address = models.CharField(max_length=512, blank=True)
     neighborhood = models.CharField(max_length=256, blank=True)
     city = models.CharField(max_length=256, blank=True)

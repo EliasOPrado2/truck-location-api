@@ -9,8 +9,6 @@ from core.models import Route
 class TerminalViewSet(views.APIView):
     """
     View to retrieve trucks per day, week and month.
-
-    :param views: _description_
     """
 
     def get(self, request, format=None):

@@ -6,7 +6,9 @@ from core.models import TruckDriver
 
 
 class TruckDriverViewSet(viewsets.ModelViewSet):
-    # add comment
+    """
+    ViewSet to display TruckDriver data and handle its filters.
+    """
     queryset = TruckDriver.objects.all()
     serializer_class = TruckDriverSerializer
     filter_backends = [DjangoFilterBackend]

@@ -5,6 +5,9 @@ from core.models import Route
 
 
 class RouteViewSet(viewsets.ModelViewSet):
+    """
+    View to display Route nested into the truck-drivers endpoint. 
+    """
     queryset = Route.objects.all()
     serializer_class = RouteSerializer
 
@@ -14,6 +17,9 @@ class RouteViewSet(viewsets.ModelViewSet):
 
 
 class RouteListViewSet(viewsets.ModelViewSet):
+    """
+    View to display on its own endpoit with get only available.
+    """
     queryset = Route.objects.all()
     serializer_class = RouteSerializer
     http_method_names = ["get"]

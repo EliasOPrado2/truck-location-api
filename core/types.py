@@ -10,8 +10,6 @@ class TruckType(models.IntegerChoices):
 
 
 class CNHType(models.TextChoices):
-    # Remember to create a logic that
-    # checks types of cnh and truck_type.
     TYPE_C = 1, "C"
     TYPE_D = 2, "D"
     TYPE_E = 3, "E"

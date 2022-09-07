@@ -12,7 +12,6 @@ USER_AGENT = "qualqueremail@realemail.com"
 docker-compose up --build
 ```
 
-
 ### Rodar o projeto com virtual env:
 
 1. Crie um arquivo `.env` no root e adicione o seguinte dado para autenticação do geopy:
@@ -108,6 +107,7 @@ Exemplo: `api/terminal/?trucks_per_day=2022-09-07` no qual ira retornar os dados
 - Expiração de rota ao desativa-la `.../route/?is_active=false` no endipoint `route` dando um parecer de retorno ao motorista.
 - Adição de logica na pasta services.
 - Adicionar testes mais profundos.
+- Adicionar os filtros do endpoint `terminal/` no swagger.
 - Não foi testado o endpoint `terminal/` por conta de mocagem de data e tempo. Caso queira testar os mesmo adicione os seguintes testes no final do arquivo `core\tests\test_api.py` e adicione no lugar de `'YYYY-MM-DD` a data atual de criação dos objetos como "na hora/dia que os testes forem feitos".
 
 ```python 
@@ -133,3 +133,7 @@ def test_terminal_trucks_per_month(self):
     self.assertGreater(trucks_per_month, 0)
     self.assertEqual(response.status_code, status.HTTP_200_OK)
 ```
+
+### Documentação da API
+
+A documentação da API pode ser analisada pelo Swagger e Redoc nos endpoints:`/swagger/` & `/redoc/`.
