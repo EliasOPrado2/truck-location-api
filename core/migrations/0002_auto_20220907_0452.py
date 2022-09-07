@@ -7,23 +7,33 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0001_initial'),
+        ("core", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='route',
-            name='destination',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='destination', to='core.address'),
+            model_name="route",
+            name="destination",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="destination",
+                to="core.address",
+            ),
         ),
         migrations.AlterField(
-            model_name='route',
-            name='origin',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='origin', to='core.address'),
+            model_name="route",
+            name="origin",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="origin",
+                to="core.address",
+            ),
         ),
         migrations.AlterField(
-            model_name='route',
-            name='truck_driver',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='core.truckdriver'),
+            model_name="route",
+            name="truck_driver",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE, to="core.truckdriver"
+            ),
         ),
     ]

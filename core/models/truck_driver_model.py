@@ -9,6 +9,7 @@ class TruckDriver(models.Model):
 
     :param models (module): hold fields and params to be used into models.
     """
+
     name = models.CharField(max_length=256)
     age = models.IntegerField()
     sex = models.IntegerField(blank=True, null=True, choices=SexType.choices)

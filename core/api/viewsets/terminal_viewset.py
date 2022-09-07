@@ -12,6 +12,7 @@ class TerminalViewSet(views.APIView):
 
     :param views: _description_
     """
+
     def get(self, request, format=None):
 
         data = {}

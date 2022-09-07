@@ -7,6 +7,7 @@ class Route(models.Model):
 
     :param models (module): hold fields and params to be used into models.
     """
+
     truck_driver = models.ForeignKey("TruckDriver", on_delete=models.CASCADE)
     origin = models.ForeignKey(
         "Address", related_name="origin", on_delete=models.CASCADE
