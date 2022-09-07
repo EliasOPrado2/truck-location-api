@@ -7,9 +7,14 @@ class Route(models.Model):
 
     :param models (module): hold fields and params to be used into models.
     """
-    truck_driver = models.ForeignKey('TruckDriver', on_delete=models.DO_NOTHING)
-    origin = models.ForeignKey('Address', related_name='origin', on_delete=models.DO_NOTHING)
-    destination = models.ForeignKey('Address', related_name='destination', on_delete=models.DO_NOTHING)
+
+    truck_driver = models.ForeignKey("TruckDriver", on_delete=models.DO_NOTHING)
+    origin = models.ForeignKey(
+        "Address", related_name="origin", on_delete=models.DO_NOTHING
+    )
+    destination = models.ForeignKey(
+        "Address", related_name="destination", on_delete=models.DO_NOTHING
+    )
 
     # remove null.
     distance = models.IntegerField(null=True)

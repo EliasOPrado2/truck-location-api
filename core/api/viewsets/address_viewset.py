@@ -1,6 +1,7 @@
 from rest_framework import viewsets
-from core.models import Address
+
 from core.api.serializers import AddressSerializer
+from core.models import Address
 
 
 class AddressViewSet(viewsets.ModelViewSet):

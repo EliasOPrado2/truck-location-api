@@ -1,6 +1,6 @@
 from django.db import models
-from core.types import TruckType, CNHType, SexType
 
+from core.types import CNHType, SexType, TruckType
 
 
 class TruckDriver(models.Model):
