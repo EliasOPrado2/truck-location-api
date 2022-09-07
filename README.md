@@ -37,7 +37,7 @@ Exemplo: `api/terminal/?trucks_per_day=2022-09-07` no qual ira retornar os dados
 
 ### Processo de adição de dados
 
-1 truck-driver
+1 criar truck-driver
 2 create two addresses
 3 create route
 4 check terminal
@@ -46,3 +46,4 @@ Exemplo: `api/terminal/?trucks_per_day=2022-09-07` no qual ira retornar os dados
 - Tratamento de exceções no view `TerminalViewSet`.
 - Expiração de rota ao desativa-la `.../route/?is_active=false` no endipoint `route` dando um parecer de retorno ao motorista.
 - Adição de logica na pasta services.
+- Adicionar testes mais profundos.
