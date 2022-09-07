@@ -30,7 +30,8 @@ class TerminalViewSet(views.APIView):
             route_per_day = Route.objects.filter(
                 created_at__date=trucks_per_day
             ).count()
-            data["route_per_day"] = route_per_day
+            print(trucks_per_day)
+            data["trucks_per_day"] = route_per_day
             return Response(data)
 
         if trucks_per_week:
@@ -44,7 +45,7 @@ class TerminalViewSet(views.APIView):
 
             route_per_week = Route.objects.filter(created_at__week=week).count()
 
-            data["route_per_week"] = route_per_week
+            data["trucks_per_week"] = route_per_week
             return Response(data)
 
         if trucks_per_month:
@@ -53,7 +54,7 @@ class TerminalViewSet(views.APIView):
                 created_at__month=trucks_per_month
             ).count()
 
-            data["route_per_month"] = route_per_month
+            data["trucks_per_month"] = route_per_month
             return Response(data)
 
         print(trucks_per_day.split("-"))
