@@ -4,7 +4,11 @@ from core.types import CNHType, SexType, TruckType
 
 
 class TruckDriver(models.Model):
-    # add comment
+    """
+    Model to insert driver's data.
+
+    :param models (module): hold fields and params to be used into models.
+    """
     name = models.CharField(max_length=256)
     age = models.IntegerField()
     sex = models.IntegerField(blank=True, null=True, choices=SexType.choices)
@@ -12,8 +16,6 @@ class TruckDriver(models.Model):
     cnh_type = models.IntegerField(choices=CNHType.choices)
     is_loaded = models.BooleanField(default=False)
     truck_type = models.IntegerField(choices=TruckType.choices)
-    # origin = models.ForeignKey('OriginCoordinate', on_delete=models.CASCADE)
-    # destination = models.ForeignKey('DestinationCoordinate', on_delete=models.CASCADE)
 
     def __str__(self):
         return str(self.name)
